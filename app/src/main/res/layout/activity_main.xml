@@ -6,13 +6,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <TextView
+    <View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/projectBlue1"
+            android:id="@+id/view2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+            android:layout_width="289dp"
+            android:layout_height="330dp"
+            app:srcCompat="@drawable/iconCloud1"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:layout_width="294dp"
+            android:layout_height="267dp" app:srcCompat="@drawable/iconCloud2"
+            android:id="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <View
+            android:layout_width="269dp"
+            android:layout_height="333dp" android:id="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#99FFFFFF"
+            android:layout_marginTop="208dp"
+            android:layout_marginStart="68dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
