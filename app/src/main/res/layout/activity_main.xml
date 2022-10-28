@@ -17,13 +17,13 @@
     <ImageView
             android:layout_width="229dp"
             android:layout_height="292dp"
-            app:srcCompat="@drawable/iconCloud1"
+            app:srcCompat="@drawable/icon_cloud1"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="44dp"/>
     <ImageView
             android:layout_width="279dp"
-            android:layout_height="392dp" app:srcCompat="@drawable/iconCloud2"
+            android:layout_height="392dp" app:srcCompat="@drawable/icon_cloud2"
             android:id="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -102,7 +102,6 @@
     <Button
             android:textStyle="bold"
             android:textSize="15sp"
-            android:background="noen"
             android:textColor="@color/projectBlue4"
             android:text="Singup"
             android:layout_width="wrap_content"
@@ -130,12 +129,12 @@
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
     <ImageView
             android:layout_width="16dp"
-            android:layout_height="12dp" app:srcCompat="@drawable/iconEmail" android:id="@+id/imageView4"
+            android:layout_height="12dp" app:srcCompat="@drawable/icon_email" android:id="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" android:layout_marginTop="13dp"
             app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName" android:layout_marginStart="8dp"/>
     <ImageView
             android:layout_width="17dp"
-            android:layout_height="14dp" app:srcCompat="@drawable/iconPadlock" android:id="@+id/imageView5"
+            android:layout_height="14dp" app:srcCompat="@drawable/icon_padlock" android:id="@+id/imageView5"
             app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
             app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" android:layout_marginTop="13dp"
             android:layout_marginStart="8dp"/>
