@@ -28,5 +28,12 @@ class MypageActivity : AppCompatActivity() {
 
             auth.signOut()
         }
+        binding.btnLook.setOnClickListener {
+            val intent = Intent (this, PostActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            this.startActivity(intent)
+
+
+        }
     }
 }
