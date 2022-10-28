@@ -46,8 +46,7 @@ dependencies {
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth-ktx'
-    //tedpermission
-    implementation 'gun0912.ted:tedpermission:2.2.3'//권한 요청을 위한 팝업을 쉽게 구성하기 위해
+
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
