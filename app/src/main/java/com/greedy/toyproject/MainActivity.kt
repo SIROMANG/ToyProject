@@ -3,20 +3,29 @@ package com.greedy.toyproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
+
 import com.greedy.toyproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
+
+   private lateinit var auth: FirebaseAuth
    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    val helper = SqliteHelper(this, "post", 1)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         // Initialize Firebase Auth
         auth = Firebase.auth
 
@@ -25,11 +34,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener{
-            val email = binding.emeil.text.toString()//이메일버튼으로 접근
+            val email = binding.emeil.text.toString()
             val password = binding.password.text.toString()
 
-            /* 여러 유효성 검사 추가할 수 있음 */
-            if (email.isNotEmpty() && password.isNotEmpty()) { //ㅣ지금은 비어있는지만 확인
+            if (email.isNotEmpty() && password.isNotEmpty()) { 
                 signIn(email, password)
             } else {
                 Toast.makeText(this, "email과 password를 입력해주세요", Toast.LENGTH_SHORT).show()
@@ -42,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun signIn(email: String, password: String) {
 
-        auth.signInWithEmailAndPassword(email, password) //회원가입 요청 (필요한 요소넘기기)
+        auth.signInWithEmailAndPassword(email, password) 
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
 
