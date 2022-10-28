@@ -14,7 +14,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textContent"
-            android:layout_marginTop="4dp"/>
+            app:layout_constraintHorizontal_bias="0.294" app:layout_constraintBottom_toBottomOf="parent"
+    />
     <TextView
             android:text="메모 내용 표시"
             android:layout_width="wrap_content"
@@ -23,15 +24,25 @@
             android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textDatetime"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginEnd="4dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:text="2022/10/25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textDatetime"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="4dp" android:layout_marginEnd="16dp"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemove" android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="삭제"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/btnRemove"
+            android:background="#FF3333"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" android:layout_marginEnd="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

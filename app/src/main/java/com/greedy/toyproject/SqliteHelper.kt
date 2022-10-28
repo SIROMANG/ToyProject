@@ -70,7 +70,7 @@ class SqliteHelper (context: Context, name: String, version: Int) : SQLiteOpenHe
     }
 
     /* 3. delete */
-    fun  deleteMemo(post: Post){
+    fun  deletePost(post: Post){
         val delete = "delete from post where no = ${post.no}"
         val db = writableDatabase
         db.execSQL(delete)
