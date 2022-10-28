@@ -1,14 +1,13 @@
 package com.greedy.toyproject
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.greedy.toyproject.databinding.ActivityPtregistBinding
 
 class PtregistActivity: AppCompatActivity()  {
@@ -24,32 +23,44 @@ class PtregistActivity: AppCompatActivity()  {
         adapter.helper = helper
 
         adapter.listData.addAll(helper.selectPost())
-//
-//        /* main activity의 recyclerView에 생성한 어댑터 연결하고 레이아웃 설정 */
+
+        /* main activity의 recyclerView에 생성한 어댑터 연결하고 레이아웃 설정 */
 //        binding.recyclerView.adapter = adapter
 //        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-//
-//        /* 메모 저장 버튼 이벤트 */
-//        binding.btnregi.setOnClickListener {
-//            /* 메모 내용이 입력 된 경우만 동작 */
-//            if (binding.editPost.text.toString().isNotEmpty()) {
-//                val post = Post(
-//                    null, binding.editPost.text.toString(),
-//                    System.currentTimeMillis()
-//                )
-//                helper.insertPost(post)
-//
-//                /* DB가 변동 되었을 때 화면도 변동될 수 있도록 adapter의 data를 수정하고
-//                * 데이터가 변화 했음을 알린다. */
-//                adapter.listData.clear()
-//                adapter.listData.addAll(helper.selectPost())
-//                adapter.notifyDataSetChanged()
-//
-//                /* 입력란 비우기 */
-//                binding.editPost.setText("")
-//
-//            }
-//        }
+
+        /* 메모 저장 버튼 이벤트 */
+        binding.btnregi.setOnClickListener {
+            /* 메모 내용이 입력 된 경우만 동작 */
+            if (binding.editText.text.toString().isNotEmpty()) {
+                val post = Post(
+                    null, binding.editText.text.toString(),
+                    System.currentTimeMillis()
+                )
+                helper.insertPost(post)
+
+                /* DB가 변동 되었을 때 화면도 변동될 수 있도록 adapter의 data를 수정하고
+                * 데이터가 변화 했음을 알린다. */
+                adapter.listData.clear()
+                adapter.listData.addAll(helper.selectPost())
+                adapter.notifyDataSetChanged()
+
+                /* 입력란 비우기 */
+                binding.editText.setText("")
+
+            }
+
+
+
+
+
+            binding.btnregi.setOnClickListener {
+                val intent = Intent(this, PostActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                this.startActivity(intent)
+
+            }
+
+        }
 
 
 

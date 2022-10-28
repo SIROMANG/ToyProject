@@ -4,8 +4,15 @@
           package="com.greedy.toyproject">
     <!--인터넷 사용권한-->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- 카메라 사용 권한 추가-->
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" /><!--카메라 권한-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--파일 읽기 권한-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!--파일 쓰기 권한-->
+    <uses-feature android:name="android.hardware.camera" android:required="true"/><!--카메라 기능 사용-->
+    <!--앱을 사용하기 위한 조건
+        required 값에 따라 반드시 필요한 속성일 수도, 없어도 일단 실행은 되는 속성일 수도 있음-->
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="false" />
 
     <application
             android:allowBackup="true"
@@ -17,6 +24,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ToyProject"
             tools:targetApi="31">
+        <activity
+                android:name=".PtregistActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".PostdetailActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".PostActivity"
+                android:exported="false"/>
         <activity
                 android:name=".MypageActivity"
                 android:exported="false"/>

@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textNo"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textContent"
@@ -21,16 +21,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textContent"
-            android:textSize="24sp"
+            android:textSize="12sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textDatetime"
             android:layout_marginEnd="4dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
-            android:text="2022/10/25"
+            android:text="10/25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textDatetime"
-            android:textSize="24sp"
+            android:textSize="12sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnRemove" android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
