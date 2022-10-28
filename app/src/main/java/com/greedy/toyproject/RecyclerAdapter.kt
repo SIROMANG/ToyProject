@@ -15,13 +15,13 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.Holder>(){
         var pPost: Post? = null
 
 
-//        init {
-//            binding.deleteButton.setOnClickListener{
-//                helper?.deletePost(pPost!!)
-//                listData.remove(pPost)
-//                notifyDataSetChanged()
-//            }
-//        }
+        init {
+           binding.btnRemove.setOnClickListener{
+                helper?.deletePost(pPost!!)
+                listData.remove(pPost)
+              notifyDataSetChanged()
+          }
+       }
 
         fun setPost(post: Post){
             binding.textNo.text = "${post.no}"
