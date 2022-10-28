@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
 
 
    private lateinit var auth: FirebaseAuth
-   private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     val helper = SqliteHelper(this, "post", 1)
 
