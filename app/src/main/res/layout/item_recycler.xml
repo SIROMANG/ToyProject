@@ -14,7 +14,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textContent"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="4dp"/>
     <TextView
             android:text="메모 내용 표시"
             android:layout_width="wrap_content"
@@ -23,23 +23,15 @@
             android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textDatetime"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"/>
     <TextView
             android:text="2022/10/25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textDatetime"
             android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp" app:layout_constraintEnd_toStartOf="@+id/btn_delete"
-            android:layout_marginEnd="4dp"/>
-    <Button
-            android:text="삭제"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_delete"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="5dp" android:layout_marginTop="5dp"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" android:layout_marginEnd="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
