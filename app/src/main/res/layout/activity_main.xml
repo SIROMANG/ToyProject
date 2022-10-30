@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="76dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="140dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view2" android:textSize="30sp"
             app:layout_constraintHorizontal_bias="0.482"/>
     <TextView
@@ -133,7 +133,7 @@
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintHorizontal_bias="0.502"
-            android:layout_marginBottom="112dp" android:textAllCaps="false"
+            android:layout_marginBottom="172dp" android:textAllCaps="false"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
     <View
             android:background="#3CB5DB"

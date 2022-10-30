@@ -36,6 +36,12 @@ class MypageActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             this.startActivity(intent)
 
+
+
+
+
         }
     }
+
 }
+
