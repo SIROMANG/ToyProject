@@ -37,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="@+id/view2"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.544"/>
+            app:layout_constraintVertical_bias="0.547"/>
     <TextView
 
             android:textColor="#3CB5DB"
@@ -75,6 +75,9 @@
             app:layout_constraintVertical_bias="0.173"/>
     <EditText
             android:id="@+id/emeil"
+            android:drawableLeft="@drawable/custom_icon_mail"
+            android:padding="10dp"
+            android:drawablePadding="7dp"
             android:textStyle="bold"
             android:textSize="13sp"
             android:layout_width="200dp"
@@ -84,11 +87,14 @@
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintHorizontal_bias="0.513"
-            android:hint="        Email Adress"
+            android:hint="Email Adress"
             app:layout_constraintTop_toTopOf="@+id/view"
             android:layout_marginTop="128dp" tools:ignore="TouchTargetSizeCheck"/>
     <EditText
             android:id="@+id/password"
+            android:drawableLeft="@drawable/custom_icon_pass"
+            android:padding="10dp"
+            android:drawablePadding="7dp"
             android:textStyle="bold"
             android:textSize="13sp"
             android:layout_width="200dp"
@@ -98,7 +104,7 @@
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/emeil"
-            android:hint="        password"
+            android:hint="Password"
             android:layout_marginTop="28dp" tools:ignore="TouchTargetSizeCheck"/>
     <Button
             android:id="@+id/join"
@@ -129,12 +135,6 @@
             app:layout_constraintHorizontal_bias="0.502"
             android:layout_marginBottom="112dp" android:textAllCaps="false"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
-    <ImageView
-            android:layout_width="17dp"
-            android:layout_height="14dp" app:srcCompat="@drawable/icon_padlock" android:id="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/password"
-            app:layout_constraintStart_toStartOf="@+id/password" android:layout_marginTop="13dp"
-            android:layout_marginStart="8dp"/>
     <View
             android:background="#3CB5DB"
             android:layout_width="63dp"
