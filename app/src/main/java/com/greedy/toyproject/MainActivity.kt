@@ -74,7 +74,8 @@ class MainActivity : AppCompatActivity() {
 
     /*로그인 이미 되어 있는 상태 또는 로그인에 성공하는 상태에 호출할 메소드 */
     fun moveResultPage() { //로그인 성공 or 로그인 된상태일 때
-        startActivity(Intent(this, MypageActivity::class.java))
+        startActivity(Intent(this, LodingActivity::class.java))
+//        startActivity(Intent(this, MypageActivity::class.java))
         finish()
     }
 

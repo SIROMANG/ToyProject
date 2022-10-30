@@ -3,10 +3,12 @@ package com.greedy.toyproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.greedy.toyproject.databinding.ActivityMypageBinding
+import kotlin.concurrent.thread
 
 class MypageActivity : AppCompatActivity() {
 
@@ -20,6 +22,7 @@ class MypageActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+
         binding.currentUser.text = "${auth.currentUser?.email}"
         binding.btnLogout.setOnClickListener{
             val intent = Intent (this, MainActivity::class.java)
@@ -32,7 +35,6 @@ class MypageActivity : AppCompatActivity() {
             val intent = Intent (this, PostActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             this.startActivity(intent)
-
 
         }
     }

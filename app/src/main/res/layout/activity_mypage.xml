@@ -112,23 +112,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:scaleType="centerInside" app:layout_constraintHorizontal_bias="0.14"
             tools:ignore="SpeakableTextPresentCheck"/>
-    <!--    <com.airbnb.lottie.LottieAnimationView-->
-    <!--            android:id="@+id/testgif"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            app:lottie_fileName="12224-snowman"-->
-    <!--            app:lottie_autoPlay="true"-->
-    <!--            app:lottie_loop="true"-->
-    <!--    />-->
-    <!--    <com.airbnb.lottie.LottieAnimationView-->
-    <!--            android:id="@+id/lottieView"-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="100dp"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent"-->
-    <!--            app:lottie_rawRes="@raw/snowman"-->
-    <!--            app:lottie_autoPlay="true"-->
-    <!--            app:lottie_loop="true" android:layout_marginTop="292dp" app:layout_constraintHorizontal_bias="0.0"/>-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
