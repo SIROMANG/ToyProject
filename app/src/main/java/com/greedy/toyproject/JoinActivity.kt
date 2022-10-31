@@ -22,11 +22,16 @@ class JoinActivity : AppCompatActivity() {
         binding.btnJoin.setOnClickListener {
             val email = binding.emeil.text.toString()
             val password = binding.password.text.toString()
+            val checkPassword = binding.checkPassword.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty()) {
+            if (email.isEmpty() || password.isEmpty() || checkPassword.isEmpty()) {
+                Toast.makeText(this, "모두 입력해주세요.", Toast.LENGTH_SHORT).show()
+            } else if(!password.equals(checkPassword)){
+                Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+            } else if(password.length > 6) {
+                Toast.makeText(this, "6자리 이상의 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+            }else {
                 createAccount(email, password)
-            } else {
-                Toast.makeText(this, "email과 password를 입력해주세요", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -40,7 +45,7 @@ class JoinActivity : AppCompatActivity() {
                     Toast.makeText(this, "회원 가입 완료", Toast.LENGTH_SHORT).show()
                     finish()
                 } else {
-                    Toast.makeText(this, "회원 가입 실패", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "6자리 이상의 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
         Log.d("email", "${email.toString()} ")
