@@ -1,5 +1,6 @@
 package com.greedy.toyproject
 
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.Holder>(){
     var helper:SqliteHelper? = null
 
     inner class Holder(val binding: ItemRecyclerBinding) : RecyclerView.ViewHolder(binding.root){
+        private lateinit var adapter: RecyclerAdapter
+        private lateinit var post: Post
 
         var pPost: Post? = null
 
@@ -26,7 +29,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.Holder>(){
         fun setPost(post: Post){
             binding.textNo.text = "${post.no}"
             binding.textContent.text = post.content
-            val sdf = SimpleDateFormat("yyyy/MM/dd")
+            val sdf = SimpleDateFormat("MM/dd")
             binding.textDatetime.text = "${sdf.format(post.datetime)}"
 
             pPost = post

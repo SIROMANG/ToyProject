@@ -28,8 +28,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <View
-            android:layout_width="284dp"
-            android:layout_height="340dp"
+            android:layout_width="280dp"
+            android:layout_height="313dp"
             android:id="@+id/view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,8 +37,9 @@
             app:layout_constraintEnd_toEndOf="@+id/view2"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.572"/>
+            app:layout_constraintVertical_bias="0.547"/>
     <TextView
+
             android:textColor="#3CB5DB"
             android:textStyle="bold"
             android:text="Welcome Back!"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="124dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="140dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view2" android:textSize="30sp"
             app:layout_constraintHorizontal_bias="0.482"/>
     <TextView
@@ -74,6 +75,9 @@
             app:layout_constraintVertical_bias="0.173"/>
     <EditText
             android:id="@+id/emeil"
+            android:drawableLeft="@drawable/custom_icon_mail"
+            android:padding="10dp"
+            android:drawablePadding="7dp"
             android:textStyle="bold"
             android:textSize="13sp"
             android:layout_width="200dp"
@@ -83,11 +87,14 @@
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintHorizontal_bias="0.513"
-            android:hint="        Email Adress"
+            android:hint="Email Adress"
             app:layout_constraintTop_toTopOf="@+id/view"
             android:layout_marginTop="128dp" tools:ignore="TouchTargetSizeCheck"/>
     <EditText
             android:id="@+id/password"
+            android:drawableLeft="@drawable/custom_icon_pass"
+            android:padding="10dp"
+            android:drawablePadding="7dp"
             android:textStyle="bold"
             android:textSize="13sp"
             android:layout_width="200dp"
@@ -97,7 +104,7 @@
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/emeil"
-            android:hint="        password"
+            android:hint="Password"
             android:layout_marginTop="28dp" tools:ignore="TouchTargetSizeCheck"/>
     <Button
             android:id="@+id/join"
@@ -125,25 +132,15 @@
             app:layout_constraintEnd_toEndOf="@+id/view"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintHorizontal_bias="0.494"
-            android:layout_marginBottom="148dp" android:textAllCaps="false"
+            app:layout_constraintHorizontal_bias="0.502"
+            android:layout_marginBottom="172dp" android:textAllCaps="false"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck"/>
-    <ImageView
-            android:layout_width="16dp"
-            android:layout_height="12dp" app:srcCompat="@drawable/icon_email" android:id="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/emeil" android:layout_marginTop="13dp"
-            app:layout_constraintStart_toStartOf="@+id/emeil" android:layout_marginStart="8dp"/>
-    <ImageView
-            android:layout_width="17dp"
-            android:layout_height="14dp" app:srcCompat="@drawable/icon_padlock" android:id="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/password"
-            app:layout_constraintStart_toStartOf="@+id/password" android:layout_marginTop="13dp"
-            android:layout_marginStart="8dp"/>
     <View
             android:background="#3CB5DB"
             android:layout_width="63dp"
             android:layout_height="3dp" android:id="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            android:layout_marginTop="3dp" app:layout_constraintStart_toStartOf="@+id/textView5"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/textView5"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

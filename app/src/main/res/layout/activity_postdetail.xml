@@ -24,25 +24,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="뒤로가기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:background="@color/projectBlue3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.8"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="92dp"
+            android:layout_height="30dp" android:id="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/bgMain33" app:layout_constraintTop_toTopOf="@+id/bgMain33"
+            android:layout_marginTop="20dp" android:layout_marginEnd="108dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="330dp"
+            android:layout_height="190dp" android:id="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            android:layout_marginTop="76dp" app:layout_constraintStart_toStartOf="@+id/bgMain33"
+            app:layout_constraintEnd_toEndOf="@+id/bgMain33"/>
     <ImageView
-            android:layout_width="274dp"
-            android:layout_height="264dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon"
-            android:id="@+id/imgMain2"
+            android:layout_width="344dp"
+            android:layout_height="273dp"
+            tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="@+id/bgMain33"
             app:layout_constraintEnd_toEndOf="@+id/bgMain33"
             app:layout_constraintTop_toTopOf="@+id/bgMain33"
-            app:layout_constraintStart_toStartOf="@+id/bgMain33"
-            app:layout_constraintBottom_toBottomOf="@+id/bgMain33"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintVertical_bias="0.174"/>
+            android:layout_marginTop="76dp"
+            app:layout_constraintHorizontal_bias="0.444"/>
     <TextView
-            android:text="PostText"
-            android:layout_width="274dp"
-            android:layout_height="200dp"
-            android:id="@+id/postText"
-            app:layout_constraintStart_toStartOf="@+id/bgMain33"
-            app:layout_constraintEnd_toEndOf="@+id/bgMain33"
-            app:layout_constraintTop_toBottomOf="@+id/imgMain2"
-            android:layout_marginTop="16dp"/>
-
+            android:text="TextView"
+            android:layout_width="87dp"
+            android:layout_height="29dp" android:id="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/bgMain33" app:layout_constraintStart_toStartOf="@+id/bgMain33"
+            android:layout_marginTop="20dp" android:layout_marginStart="40dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

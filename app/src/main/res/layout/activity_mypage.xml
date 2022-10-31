@@ -6,6 +6,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MypageActivity">
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/projectBlue1"
+            android:id="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+            android:layout_width="229dp"
+            android:layout_height="292dp"
+            app:srcCompat="@drawable/icon_cloud1"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="44dp"/>
+    <ImageView
+            android:layout_width="279dp"
+            android:layout_height="392dp" app:srcCompat="@drawable/icon_cloud2"
+            android:id="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
     <TextView
             android:id="@+id/currentUser"
             android:textColor="#3CB5DB"
@@ -14,10 +36,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="124dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="120dp" app:layout_constraintEnd_toEndOf="parent"
             android:textSize="30sp"
-            app:layout_constraintHorizontal_bias="0.482" app:layout_constraintStart_toStartOf="parent"/>
-
+            app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:textColor="#3CB5DB"
             android:text="Welcome and come often!!"
@@ -27,67 +48,70 @@
             app:layout_constraintTop_toBottomOf="@+id/currentUser"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.563" android:textSize="18sp"/>
-    <ImageButton
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon_logout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnUnregister"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" android:layout_marginTop="280dp"/>
-    <ImageButton
-            android:id="@+id/btnUnregister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon_unregiser"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" android:layout_marginTop="280dp"/>
+
     <ImageButton
             android:id="@+id/btnNews"
             app:srcCompat="@drawable/icon_news"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="58dp"
+            android:layout_height="52dp"
             tools:ignore="SpeakableTextPresentCheck"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/btnLook"
-            app:layout_constraintHorizontal_bias="0.393"/>
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toStartOf="@+id/btnWeather"
+            app:layout_constraintTop_toTopOf="@+id/btnWeather"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" android:layout_marginEnd="32dp"/>
     <ImageButton
             android:id="@+id/btnWeather"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="52dp"
             app:srcCompat="@drawable/icon_umbrella"
-            app:layout_constraintStart_toEndOf="@+id/btnLook"
-            android:layout_marginStart="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintHorizontal_bias="0.746"
-            android:layout_marginBottom="8dp"
-    />
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
     <ImageButton
             android:id="@+id/btnLook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="58dp"
+            android:layout_height="52dp"
             app:srcCompat="@drawable/icon_pants"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="SpeakableTextPresentCheck"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="1.0"/>
+            android:layout_marginBottom="136dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside" app:layout_constraintStart_toEndOf="@+id/btnWeather"
+            android:layout_marginStart="32dp" app:layout_constraintTop_toTopOf="@+id/btnWeather"
+            app:layout_constraintVertical_bias="0.0"/>
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="237dp"
+            android:layout_height="225dp"
             app:srcCompat="@drawable/icon_person"
             android:id="@+id/imageView6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.725"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.561"
+            app:layout_constraintHorizontal_bias="0.502"/>
+    <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="158dp"
+            android:layout_height="151dp" app:srcCompat="@drawable/icon_logout"
+            android:background="@android:color/transparent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.324"
+            android:scaleType="centerInside" android:layout_marginStart="28dp"
+            tools:ignore="SpeakableTextPresentCheck"/>
+    <ImageButton
+            android:layout_width="121dp"
+            android:layout_height="102dp" app:srcCompat="@drawable/icon_unregiser"
+            android:id="@+id/btnUnregister"
+            android:background="@android:color/transparent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.384"
+            app:layout_constraintStart_toEndOf="@+id/btnLogout" android:layout_marginStart="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerInside" app:layout_constraintHorizontal_bias="0.283"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
