@@ -54,7 +54,6 @@
             app:srcCompat="@drawable/icon_news"
             android:layout_width="58dp"
             android:layout_height="52dp"
-            tools:ignore="SpeakableTextPresentCheck"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             app:layout_constraintEnd_toStartOf="@+id/btnWeather"
