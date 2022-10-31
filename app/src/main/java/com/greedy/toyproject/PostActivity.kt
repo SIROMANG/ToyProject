@@ -38,6 +38,7 @@ class PostActivity : AppCompatActivity() {
             this.startActivity(intent)
 
         }
+
         binding.homebtn.setOnClickListener {
             val intent = Intent(this, MypageActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
