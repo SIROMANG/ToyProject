@@ -29,6 +29,9 @@
             android:theme="@style/Theme.ToyProject"
             tools:targetApi="31">
         <activity
+                android:name=".NewsList"
+                android:exported="false"/>
+        <activity
                 android:name=".LodingActivity"
                 android:exported="false"/>
         <activity
