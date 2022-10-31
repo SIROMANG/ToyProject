@@ -35,12 +35,15 @@ class MypageActivity : AppCompatActivity() {
             val intent = Intent (this, PostActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             this.startActivity(intent)
-
-
-
-
-
         }
+
+        binding.btnNews.setOnClickListener {
+            val intent = Intent (this, NewsList::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            this.startActivity(intent)
+        }
+
+
     }
 
 }
