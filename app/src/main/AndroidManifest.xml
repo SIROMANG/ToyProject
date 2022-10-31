@@ -5,6 +5,11 @@
     <!-- 인터넷 사용권한 -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/> <!-- 카메라 권한 -->
+
+    <!-- 저장 파일에 접근하기 위한 퍼미션 설정 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <!--
 앱을 사용하기 위한 조건
         required 값에 따라 반드시 필요한 속성일 수도, 없어도 일단 실행은 되는 속성일 수도 있음
