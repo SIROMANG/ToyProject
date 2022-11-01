@@ -24,7 +24,8 @@ class MypageActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        binding.currentUser.text = "${auth.currentUser?.email}"
+        var userName = "I'm ${auth.currentUser?.email}"
+        binding.currentUser.text = userName.substring(0,userName.indexOf("@"))
         binding.btnLogout.setOnClickListener{
             val intent = Intent (this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
