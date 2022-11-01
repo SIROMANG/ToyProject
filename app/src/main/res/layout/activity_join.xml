@@ -41,7 +41,7 @@
     <TextView
             android:textColor="#3CB5DB"
             android:textStyle="bold"
-            android:text="Hellow"
+            android:text="Hello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
@@ -62,7 +62,7 @@
     <TextView
             android:textColor="#787878"
             android:textStyle="bold"
-            android:text="Singup"
+            android:text="Signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
@@ -141,7 +141,7 @@
             android:background="@drawable/blueround_button"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="Singup"
+            android:text="Signup"
             android:layout_width="109dp"
             android:layout_height="45dp"
             app:layout_constraintEnd_toEndOf="@+id/view"

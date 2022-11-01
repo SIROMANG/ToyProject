@@ -23,7 +23,7 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
 
         inner class ViewHolder(val binding: ListWeatherBinding) : RecyclerView.ViewHolder(binding.root){
             fun setItem(item : ModelWeather){
-                binding.toTime.text = item.fcstTime
+                binding.toTime.text = getTime(item.fcstTime)
                 binding.rainType.text = getRainType(item.rainType)
                 binding.humidity.text = item.humidity
                 binding.sky.text = getSky(item.sky)
@@ -54,6 +54,39 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
             }
         }
 
+      fun getTime(factTime : String) : String {
+          if(factTime != "지금") {
+              var hourSystem : Int = factTime.toInt()
+              var hourSystemString = ""
+
+              if(hourSystem == 0) {
+                  return "오전 12시"
+              } else if(hourSystem > 2100) {
+                  hourSystem -= 1200
+                  hourSystemString = hourSystem.toString()
+                  return "오후 ${hourSystemString[0]}${hourSystemString[1]}시"
+              } else if(hourSystem == 1200){
+                  return "오후 12시"
+              } else if(hourSystem > 1200) {
+                  hourSystem -= 1200
+                  hourSystemString = hourSystem.toString()
+                  return "오후 ${hourSystemString[0]}시"
+              }
+
+              else if(hourSystem >= 1000) {
+                  hourSystemString = hourSystem.toString()
+
+                  return "오전 ${hourSystemString[0]}${hourSystemString[1]}시"
+              } else {
+                  hourSystemString = hourSystem.toString()
+
+                  return "오전 ${hourSystemString[0]}시"
+              }
+          } else {
+              return factTime
+          }
+      }
+
       fun getRecommends(temp : Int) : String {
             return when (temp) {
                 in 5..8 -> "울 코트, 가죽 옷, 기모"
@@ -66,6 +99,7 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
                 else -> "패딩, 누빔 옷, 목도리"
             }
         }
+
 
 
 

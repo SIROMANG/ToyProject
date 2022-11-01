@@ -11,9 +11,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="00시의 날씨"
-            android:textColor="#7A7777"
+            android:textStyle="bold"
             android:textSize="24dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="70dp"
             android:layout_marginBottom="10dp"/>
 
     <TableLayout
@@ -27,9 +28,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="기온"
+                    android:textStyle="bold"
                     android:textSize="15dp"
                     android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="30dp"
                     android:paddingRight="20dp"/>
             <TextView
                     android:layout_width="wrap_content"
@@ -37,7 +39,9 @@
                     android:text=""
                     android:id="@+id/temp"
                     android:textSize="15dp"
+                    android:textColor="#26D3DE"
                     android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"/>
         </TableRow>
         <TableRow>
@@ -45,16 +49,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="하늘 상태"
+                    android:textStyle="bold"
                     android:textSize="15dp"
                     android:paddingTop="5dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="30dp"
                     android:paddingRight="20dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="15dp"
+                    android:textColor="#26D3DE"
                     android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:id="@+id/sky"/>
         </TableRow>
@@ -63,16 +70,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="습도"
+                    android:textStyle="bold"
                     android:textSize="15dp"
                     android:paddingTop="5dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="30dp"
                     android:paddingRight="20dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="15dp"
+                    android:textColor="#26D3DE"
                     android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:id="@+id/humidity"/>
         </TableRow>
@@ -81,16 +91,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="강수 형태"
+                    android:textStyle="bold"
                     android:textSize="15dp"
                     android:paddingTop="5dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="30dp"
                     android:paddingRight="20dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="15dp"
+                    android:textColor="#26D3DE"
                     android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:id="@+id/rainType"/>
         </TableRow>
@@ -99,9 +112,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="의상 추천"
+                    android:textStyle="bold"
                     android:textSize="15dp"
                     android:paddingTop="5dp"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="30dp"
                     android:paddingRight="20dp"
                     android:paddingBottom="10dp"/>
             <TextView
@@ -109,7 +123,9 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="15dp"
+                    android:textColor="#26D3DE"
                     android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:id="@+id/recommends"/>
         </TableRow>

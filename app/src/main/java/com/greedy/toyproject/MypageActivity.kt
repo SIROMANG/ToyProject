@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.greedy.toyproject.databinding.ActivityMypageBinding
+import com.greedy.toyproject.weather.WeatherActivity
 import kotlin.concurrent.thread
 
 class MypageActivity : AppCompatActivity() {
@@ -53,6 +54,12 @@ class MypageActivity : AppCompatActivity() {
 
         binding.btnNews.setOnClickListener {
             val intent = Intent (this, NewsList::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            this.startActivity(intent)
+        }
+
+        binding.btnWeather.setOnClickListener {
+            val intent = Intent (this, WeatherActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             this.startActivity(intent)
         }
