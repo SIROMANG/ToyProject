@@ -28,7 +28,7 @@ class JoinActivity : AppCompatActivity() {
                 Toast.makeText(this, "모두 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else if(!password.equals(checkPassword)){
                 Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
-            } else if(password.length > 6) {
+            } else if(password.length < 6) {
                 Toast.makeText(this, "6자리 이상의 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }else {
                 createAccount(email, password)
