@@ -29,6 +29,8 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ToyProject"
             tools:targetApi="31">
+        <activity android:name=".weather.WeatherActivity"
+                  android:exported="false"/>
         <activity
                 android:name=".NewsList"
                 android:exported="false"/>
