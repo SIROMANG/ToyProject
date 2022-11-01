@@ -1,5 +1,6 @@
 package com.greedy.toyproject.weather
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.greedy.toyproject.MypageActivity
 import com.greedy.toyproject.R
 import com.greedy.toyproject.databinding.ActivityWeatherBinding
 import retrofit2.Call
@@ -73,6 +75,7 @@ class WeatherActivity : AppCompatActivity() {
                         index++
                     }
 
+                    weatherArr[0].fcstTime = "지금"
                     for (i in 0..5) weatherArr[i].fcstTime = it[i].fcstTime
 
                     binding.weatherRecyclerView.adapter = WeatherAdapter(weatherArr)
@@ -89,6 +92,11 @@ class WeatherActivity : AppCompatActivity() {
 
 
         })
+
+        val moveHome = Intent(this, MypageActivity::class.java)
+        binding.HomeButton.setOnClickListener {
+            startActivity(moveHome)
+        }
     }
 
     private fun getBaseTime(h : String, m : String) : String {
@@ -120,5 +128,7 @@ class WeatherActivity : AppCompatActivity() {
 
         }
     }
+
+
 
 }
