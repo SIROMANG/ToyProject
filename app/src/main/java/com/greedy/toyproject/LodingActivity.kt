@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.greedy.toyproject.databinding.ActivityLodingBinding
 import com.greedy.toyproject.databinding.ActivityMainBinding
+import com.greedy.toyproject.weather.WeatherActivity
 import kotlin.concurrent.thread
 
 class LodingActivity : AppCompatActivity() {
@@ -34,6 +35,7 @@ class LodingActivity : AppCompatActivity() {
         binding.lodingBack.visibility = if(show) View.VISIBLE else View.GONE
         //show 따라 View 처리가 VISIBLE or GONE
         startActivity(Intent(this, MypageActivity::class.java))
+
         finish()
     }
 }

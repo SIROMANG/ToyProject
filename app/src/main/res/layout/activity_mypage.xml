@@ -112,6 +112,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:scaleType="centerInside" app:layout_constraintHorizontal_bias="0.283"
             tools:ignore="SpeakableTextPresentCheck"/>
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/snowman"
+            android:layout_width="63dp"
+            app:lottie_rawRes="@raw/sunny_weather"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            tools:ignore="ImageContrastCheck" android:visibility="visible" tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="53dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintVertical_bias="0.023"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
