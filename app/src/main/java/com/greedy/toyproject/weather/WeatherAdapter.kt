@@ -3,6 +3,7 @@ package com.greedy.toyproject.weather
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.greedy.toyproject.R
 import com.greedy.toyproject.databinding.ListWeatherBinding
 
 class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<WeatherAdapter.ViewHolder> () {
@@ -25,8 +26,10 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
             fun setItem(item : ModelWeather){
                 binding.toTime.text = getTime(item.fcstTime)
                 binding.rainType.text = getRainType(item.rainType)
+                binding.imgRain.setImageResource(getRainStatus(item.rainType))
                 binding.humidity.text = item.humidity
                 binding.sky.text = getSky(item.sky)
+                binding.imgWeather.setImageResource(getSkyType(item.sky))
                 binding.temp.text = item.temp + "°"
                 binding.recommends.text = getRecommends(item.temp.toInt())
             }
@@ -41,7 +44,20 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
                 "5" -> "빗방울"
                 "6" -> "빗방울눈날림"
                 "7" -> "눈날림"
-                else -> "오류 rainType : " + rainType
+                else -> "오류 : " + rainType
+            }
+        }
+
+        fun getRainStatus(rainType: String) : Int {
+            return when(rainType) {
+                "0" -> R.drawable.sun
+                "1" -> R.drawable.rain
+                "2" -> R.drawable.snowfall
+                "3" -> R.drawable.snow
+                "5" -> R.drawable.rain
+                "6" -> R.drawable.snowfall
+                "7" -> R.drawable.snow
+                else -> R.drawable.sun
             }
         }
 
@@ -50,9 +66,18 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
                 "1" -> "맑음"
                 "3" -> "구름 많음"
                 "4" -> "흐림"
-                else -> "오류 rainType : " + sky
+                else -> "오류 : " + sky
             }
         }
+
+    fun getSkyType(sky : String) : Int {
+        return when(sky) {
+            "1" -> R.drawable.sun
+            "3" -> R.drawable.cloudy
+            "4" -> R.drawable.cloud
+            else -> R.drawable.sun
+        }
+    }
 
       fun getTime(factTime : String) : String {
           if(factTime != "지금") {
