@@ -37,7 +37,7 @@ class WeatherActivity : AppCompatActivity() {
         binding.weatherRecyclerView.layoutManager = LinearLayoutManager(this)
 
         binding.toDate.text =
-            SimpleDateFormat("MM월 dd일", Locale.getDefault()).format(Calendar.getInstance().time) + "날씨"
+            SimpleDateFormat("MM월 dd일", Locale.getDefault()).format(Calendar.getInstance().time) + " 날씨🌞"
         setWeather(nx, ny)
 
 
