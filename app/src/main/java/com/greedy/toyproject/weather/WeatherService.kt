@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherService {
-    @GET("getUltraSrtFcst?serviceKey=8jyx13kDrd2hrOVbhbvodT9wAayk5Jd4o1XapMmJFzFSkJYuli21qs80outVpQoDV134ckdkru5QoF%2BXpmR%2F1g%3D%3D")
+    @GET("getUltraSrtFcst?serviceKey=서비스키")
 
     fun getWeather(@Query("numOfRows") num_of_rows : Int,   // 한 페이지 경과 수
                    @Query("pageNo") page_no : Int,          // 페이지 번호
